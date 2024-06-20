@@ -61,9 +61,10 @@ function Form({route, method}: {route: string, method: string}) {
             />
         </label>
 
-        <button type="submit"
+        <button type="submit" disabled={loading}
             className='w-1/2 p-2 mt-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent'
         >
+            {loading ? 'Loading...' : 'Submit'}
             {method === "login" ? "Login" : "Register"}
         </button>
     </form>
